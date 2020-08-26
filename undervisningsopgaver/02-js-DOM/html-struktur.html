@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aticle</title>
     <style>
+        .flex-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         img {
             width: 100%;
         }
@@ -15,11 +21,23 @@
             text-align: center;
         }
 
+        h2 {
+            margin-bottom: -20px;
+            margin-left: 200px;
+        }
+
         header,
         footer {
             padding: 10px 0;
             border: 1px solid #888;
         }
+
+        .art {
+            border: 1px solid #888;
+            width: 400px;
+            margin: 20px 20px 0px 0px;
+        }
+
     </style>
 </head>
 
@@ -28,8 +46,8 @@
         <h1>Titel</h1>
     </header>
     <main>
-        <h2>undertitel</h2>
-        <section>
+        <h2>Undertitel</h2>
+        <section class="flex-box">
             <article class="art">
                 <div><img src="https://placeimg.com/640/480/any"></div>
                 <h3>Article1</h3>
@@ -46,4 +64,6 @@
         </footer>
     </main>
     <script></script>
-</body></html>
+</body>
+
+</html>
