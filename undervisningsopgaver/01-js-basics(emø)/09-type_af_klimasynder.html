@@ -1,43 +1,40 @@
 
 <!DOCTYPE html>
-<html lang="da">
+<html>
+
 <head>
+    <title>test</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
 </head>
 
 <body>
-    <h1>Hvor meget CO2 har du udledt?</h1>
-    <p>Antal timer du har fløjet</p>
-    <input type="number" id="timer">
-    <button>Udregn og kig i konsol</button>
-
     <script>
-        //Når det klikkes på knappen
-        const knap = document.querySelector("button");
-        knap.addEventListener("click", button_clicked);
+        let timer = 3;
 
-        function button_clicked() {
+        let co2UdledtIKgVedFlyrejse = Math.round(timer * 109);
+        let klimaSynderKommentar;
 
-            const tal = 109;
-            let timer = document.querySelector("#timer").value;
+        if (co2UdledtIKgVedFlyrejse < 100) {
 
-            let co2 = timer * tal;
+            klimaSynderKommentar = "Tæt på Thunberg.";
 
-            let resultat = `Ved ${timer} timers flyrejse har du udledt ${co2} kg CO2.`;
+        } else if (co2UdledtIKgVedFlyrejse < 200) {
 
-            if (co2 < 100) {
-                console.log(`${resultat} Tæt på Thunberg.`);
-            } else if (co2 < 200) {
-                console.log(`${resultat} Ja ja, du behøver ikke at melde dig ud af Å!.`);
-            } else if (co2 < 600) {
-                console.log(`${resultat} Det er godt for turismen i nordeuropa.`);
-            } else {
-                console.log(`${resultat} Nå ja vi kan jo altid kolonisere en anden planet...`);
-            }
+            klimaSynderKommentar = "Ja ja, du behøver ikke at melde dig ud af Å!";
+
+
+        } else if (co2UdledtIKgVedFlyrejse < 600) {
+
+            klimaSynderKommentar = "Det er godt for turismen i nordeuropa.";
+
+
+
+        } else {
+
+            klimaSynderKommentar = "Nå ja vi kan jo altid kolonisere en anden planet ...";
+
         }
+        console.log(`Du har fløjet ${timer} timer og udledt ${co2UdledtIKgVedFlyrejse} kg CO2. ${klimaSynderKommentar}`);
     </script>
-
-
 </body></html>
