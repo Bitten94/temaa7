@@ -2,27 +2,32 @@
 <html lang="da">
 
 <head>
+    <title>test</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="">
 </head>
 
 <body>
-    <h1>Hvad er dit navn?</h1>
-
-    <input type="text" id="name">
-    <button>Enter og kig i konsol</button>
-
-
+    <div></div>
     <script>
-        const knap = document.querySelector("button");
-        knap.addEventListener("click", navnIndtast);
+        let time = new Date().getHours();
 
-        function navnIndtast() {
-            let brugernavn = document.querySelector("#name").value;
-            console.log(`Goddag ${brugernavn}!`);
+        //Godnat mellem 24 og 5.
+        if (time < 5) {
+            console.log("godnat");
+        }
+
+        //Godmorgen mellem kl. 5 og kl 10,
+        else if (time < 10) {
+            console.log("godmorgen");
+        }
+        //Goddag mellem kl 10 og 18,
+        else if (time < 18) {
+            console.log("goddag");
+        }
+        //Godaften mellem 18 og 24 og
+        else {
+            console.log("godaften");
         }
     </script>
 </body></html>
-
