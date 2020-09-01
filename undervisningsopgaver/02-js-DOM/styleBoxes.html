@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>js-oevelse-1</title>
+    <style>
+        .box {
+            display: inline-block;
+            width: 10vw;
+            height: 10vw;
+            border: 1px solid silver;
+            margin: 7vw;
+            transition: all 1s;
+            background-color: aquamarine;
+        }
+
+        /*********************/
+
+    </style>
+
+</head>
+
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("start");
+            let box1 = document.querySelector("#box1");
+            let box2 = document.querySelector("#box2");
+            let box3 = document.querySelector("#box3");
+            let box4 = document.querySelector("#box4");
+
+            box1.addEventListener("click", rød);
+            box1.addEventListener("click", sort);
+            box1.addEventListener("click", rund);
+            box1.addEventListener("click", støre);
+
+            function rød() {
+
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
